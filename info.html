@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The QUIZ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script name="javascript">
+		function cls()
+		{
+			var conf=confirm("You Are About To Close The Page");
+			if(conf==true)
+			{
+				window.close();
+			}
+		}
+
+    function str1()
+    {
+      var a=document.getElementById("inp").value;
+      var b=document.getElementById("mail").value;
+      if(a=="")
+      {
+        alert("The Fields Can Not Be Empty");
+      }
+      else if(b=="")
+      {
+       alert("The Fields Can Not Be Empty"); 
+      }
+      else if(a=="" && b=="")
+      {
+        alert("The Fields Can Not Be Empty");
+      }
+      else
+      {
+       window.open("q1.html");
+      window.close("info.html");  
+      }
+    }
+	</script>
+
+	<style>
+     /* .full
+      {
+      	margin-top:100px;
+      	margin-left:350px;
+      	height:500px;
+      	width:800px;
+      	border:4px solid black;
+      }*/
+      #bk
+      {
+      	position: absolute;
+      	width:800px;
+      	height:500px;
+      }
+      #cl
+      {
+      	position: absolute;
+      	height:30px;
+      	width:30px;
+      	margin-left:770px;
+      }
+      #cl:hover
+      {
+      	background-color: red;
+      }
+      #f_name
+      {
+        position: absolute;
+        font-weight: bolder;
+        font-size:30px;
+        padding:20px;
+        margin-left:200px;
+      }
+      #inp
+      {
+        border-radius: 20px;
+        height:30px;
+      }
+      #e_mail
+      {
+        position: absolute;
+        font-weight: bolder;
+        font-size:30px;
+        padding:20px;
+        margin-top:150px;
+        margin-left:200px;
+      }
+      #mail
+      {
+         border-radius: 20px;
+         height:30px;
+      }
+      #st
+      {
+        position: absolute;
+        height:80px;
+        margin-left:350px;
+        margin-top:260px;
+      }
+
+      #st:hover
+      {
+        position: absolute;
+        height:76px;
+        margin-left:350px;
+        margin-top:260px;
+      }
+
+	</style>
+</head>
+<body>
+  <div class="container">
+	<div class="full">
+    <img src="back.jpg" id="bk">
+    <input type="image"  src="close.png" id="cl"      onclick="cls()">
+     <p id="f_name">NAME &nbsp;==> <input type="text" id="inp"></p>
+     <p id="e_mail">EMAIL&nbsp;==> <input type="email" id="mail"></p>
+     <input type="image"  src="str.png" id="st"        onclick="str1()">
+    </div>
+  </div>
+</body>
+</html>

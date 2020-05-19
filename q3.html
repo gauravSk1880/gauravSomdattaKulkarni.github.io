@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The QUIZ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script name="javascript">
+    function cls()
+    {
+      var conf=confirm("You Are About To Close The Page");
+      if(conf==true)
+      {
+        window.close();
+      }
+    }
+
+    function chk()
+    {
+      var c=document.getElementById("cho").value;
+      if(c=="")
+      {
+        alert("Please Answer The Question");
+      }
+      else if(c=="A" || c=="a")
+      {
+        alert("Wrong Answer");
+        setTimeout(window.close(),10);
+      }
+      else if(c=="B" || c=="b")
+      {
+        alert("Right Answer");
+        setTimeout(window.close("q1.html"),window.open("q4.html"),10);
+        
+      }
+      else if(c=="C" || c=="c")
+      {
+        
+         alert("Wrong Answer");
+        setTimeout(window.close(),10);
+      }
+      else
+      {
+        alert("Please Select Valid Option");
+      }
+    }
+  </script>
+
+  <style>
+      /*.full
+      {
+        margin-top:100px;
+        margin-left:350px;
+        height:500px;
+        width:800px;
+        border:4px solid black;
+      }*/
+      #bk
+      {
+        position: absolute;
+        width:800px;
+        height:500px;
+      }
+      #cl
+      {
+        position: absolute;
+        height:30px;
+        width:30px;
+        margin-left:770px;
+      }
+      #cl:hover
+      {
+      
+        background-color: red;
+      }
+      #que
+      {
+        position: absolute;
+        margin-left:80px;
+        font-size: 40px;
+        word-spacing: 5px;
+      }
+      #opt
+      {
+        position: absolute;
+        margin-top:130px;
+        margin-left:90px;
+        font-weight: bolder;
+        font-size:40px;
+        color:red;
+      }
+      #cho
+      {
+        position: absolute;
+        margin-top:325px;
+        margin-left:150px;
+        width:90px;
+        border-radius:20px;
+        border-color: red;
+        font-size:40px;
+        font-weight:bolder;
+        color:green; 
+      }
+      #sub_btn
+      {
+        position: absolute;
+        height:70px;
+        width:70px;
+        margin-top:320px;
+        margin-left:280px;
+      }
+      #sub_btn:hover
+      {
+        position: absolute;
+        height:60px;
+        width:60px;
+        margin-top:320px;
+        margin-left:280px;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="full">
+    <img src="back.jpg" id="bk">
+    <input type="image"  src="close.png" id="cl"      onclick="cls()">
+    <p id="que">
+      Q. Who is Known As Human Calculator ?
+    </p>
+    <p id="opt">
+      A. Shikhar <br>
+      <span style="color:blue">B.Shakuntala Devi </span><br>
+       <span style="color:green">C . Ram Roy</span>
+    </p>
+    <input type="txt" maxlength="1" id="cho">
+    <input type="image"  src="sub.png" id="sub_btn"      onclick="chk()">
+    
+    </div>
+</body>
+</html>

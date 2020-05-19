@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The QUIZ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script name="javascript">
+		function cls()
+		{
+			var conf=confirm("You Are About To Close The Page");
+			if(conf==true)
+			{
+				window.close();
+			}
+		}
+
+		function str()
+		{
+			window.open("info.html");
+			window.close("main_quiz.html");
+		}
+	</script>
+
+	<style>
+      /*.full
+      {
+      	margin-top:100px;
+      	margin-left:350px;
+      	height:500px;
+      	width:800px;
+      	border:4px solid black;
+      }*/
+      #bk
+      {
+      	position: absolute;
+      	width:800px;
+      	height:500px;
+      }
+      #cl
+      {
+      	position: absolute;
+      	height:30px;
+      	width:30px;
+      	margin-left:770px;
+      }
+      #cl:hover
+      {
+      	background-color: red;
+      }
+
+      #head1
+      {
+      	position: absolute;
+      	color:red;
+      	font-size:60px;
+      	margin-left:50px;
+      	margin-top:90px;
+      }
+
+      #st
+      {
+      	position: absolute;
+      	height:80px;
+      	margin-left:350px;
+      	margin-top:200px;
+      }
+
+      #st:hover
+      {
+      	position: absolute;
+      	height:78px;
+      	margin-left:350px;
+      	margin-top:200px;
+      }
+
+	</style>
+</head>
+<body>
+  <div class="container">
+	<div class="full">
+    <img src="back.jpg" id="bk">
+    <input type="image"  src="close.png" id="cl"      onclick="cls()">
+    <h1 id="head1">
+      Welcome In Online Quiz
+    </h1>
+    <input type="image"  src="str.png" id="st"        onclick="str()">
+    
+    </div>
+  </div>
+</body>
+</html>
